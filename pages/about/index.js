@@ -14,6 +14,17 @@ import {
   SiTypescript,
   SiGraphql,
   SiReactquery,
+  SiStripe,
+  SiMongodb,
+  SiPrisma,
+  SiSass,
+  SiTailwindcss,
+  SiMui,
+  SiGit,
+  SiAzuredevops,
+  SiJest,
+  SiReacthookform,
+  SiTestinglibrary,
 } from "react-icons/si";
 
 // framer-motion
@@ -28,24 +39,40 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 key="1" />,
-          <FaCss3 key="2" />,
-          <FaJs key="3" />,
-          <SiTypescript key="4" />,
-          <FaReact key="5" />,
-          <SiNextdotjs key="6" />,
-          <SiFramer key="7" />,
-          <FaWordpress key="8" />,
-          <SiGraphql key="9" />,
-          <SiReactquery key="10" />,
+          { icon: <FaHtml5 key="1" />, tooltip: "HTML" },
+          { icon: <FaCss3 key="2" />, tooltip: "CSS" },
+          { icon: <FaJs key="3" />, tooltip: "JavaScript" },
+          { icon: <SiTypescript key="4" />, tooltip: "TypeScript" },
+          { icon: <FaReact key="5" />, tooltip: "React" },
+          { icon: <SiNextdotjs key="6" />, tooltip: "Next.js" },
+          { icon: <SiFramer key="7" />, tooltip: "Framer Motion" },
+          { icon: <FaWordpress key="8" />, tooltip: "WordPress" },
+          { icon: <SiGraphql key="9" />, tooltip: "GraphQL" },
+          { icon: <SiReactquery key="10" />, tooltip: "React Query" },
+          { icon: <SiStripe key="11" />, tooltip: "Stripe" },
+          { icon: <SiMongodb key="12" />, tooltip: "MongoDB" },
+          { icon: <SiPrisma key="13" />, tooltip: "Prisma" },
+          { icon: <SiSass key="14" />, tooltip: "Sass" },
+          { icon: <SiTailwindcss key="15" />, tooltip: "Tailwind CSS" },
+          { icon: <SiMui key="16" />, tooltip: "Material UI" },
+          { icon: <SiGit key="17" />, tooltip: "Git" },
+          { icon: <SiAzuredevops key="18" />, tooltip: "Azure DevOps" },
+          { icon: <SiReacthookform key="29" />, tooltip: "React Hook Form" },
         ],
       },
       {
         title: "UI/UX Design",
         icons: [
-          <FaFigma key="11" />,
-          <SiAdobexd key="12" />,
-          <SiAdobephotoshop key="13" />,
+          { icon: <FaFigma key="b1" />, tooltip: "Figma" },
+          { icon: <SiAdobexd key="b2" />, tooltip: "Adobe XD" },
+          { icon: <SiAdobephotoshop key="b3" />, tooltip: "Adobe Photoshop" },
+        ],
+      },
+      {
+        title: "Testing",
+        icons: [
+          { icon: <SiJest key="c1" />, tooltip: "Jest" },
+          { icon: <SiTestinglibrary key="c2" />, tooltip: "Testing Library" },
         ],
       },
     ],
@@ -114,13 +141,14 @@ const counterData = [
 import CountUp from "react-countup";
 
 // components
-import Avatar from "../../components/Avatar";
-import Circles from "../../components/Circles";
+
+import Circles from "../../components/images/Circles";
 import { useState } from "react";
 import {
   calculateCodingHours,
   calculateYearsAsDeveloper,
 } from "../../utils/dates";
+import Avatar from "../../components/images/Avatar";
 
 const About = () => {
   const [index, setIndex] = useState(0);
@@ -133,7 +161,7 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[260px] avatar h-3/4"
+        className="hidden xl:flex absolute bottom-0 -left-[280px] avatar h-3/4"
       >
         <Avatar />
       </motion.div>
@@ -232,13 +260,28 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {/* icons */}
-                    {item.icons?.map((icon, iconIndex) => {
-                      return (
-                        <div key={iconIndex} className="text-2xl ">
-                          {icon}
-                        </div>
-                      );
-                    })}
+                    <div className="flex flex-row gap-2 flex-wrap">
+                      {item.icons?.map((iconItem, iconIndex) => {
+                        return (
+                          <div
+                            key={iconIndex}
+                            className="group relative flex hover:text-accent transition-all duration-300"
+                          >
+                            <div className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 hidden xl:group-hover:flex">
+                              <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
+                                <div className="text-[12px] leading-none font-semibold capitalize">
+                                  {iconItem.tooltip}
+                                </div>
+                                <div className="border-solid border-t-white border-t-8 border-x-transparent border-x-[6px] border-b-0 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[100%]"></div>
+                              </div>
+                            </div>
+                            <div key={iconIndex} className="text-2xl">
+                              {iconItem.icon}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               );

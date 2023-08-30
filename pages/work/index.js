@@ -1,7 +1,7 @@
 // components
-import WorkSlider from "../../components/WorkSlider";
-import Bulb from "../../components/Bulb";
-import Circles from "../../components/Circles";
+import WorkSlider from "../../components/work/WorkSlider";
+import Bulb from "../../components/images/Bulb";
+import Circles from "../../components/images/Circles";
 
 // framer-motion
 import { motion } from "framer-motion";
@@ -31,7 +31,8 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              nereknu cus
+              Explore My Portfolio: Showcasing My Work, Creativity, and Passion
+              for development.
             </motion.p>
           </div>
           {/* slider */}

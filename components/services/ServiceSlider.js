@@ -22,29 +22,29 @@ import { FreeMode, Pagination } from "swiper";
 // service data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <RxDesktop />,
+    title: "Web Development",
+    description: "Full-Stack Web Development with Next.js and React.",
   },
   {
     icon: <RxPencil2 />,
     title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxReader />,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Designing with Figma, Adobe XD and Photoshop",
   },
   {
     icon: <RxRocket />,
     title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Search Engine Optimization with the best practices.",
+  },
+  {
+    icon: <RxReader />,
+    title: "Copywriting",
+    description: "Copywriting for your website and social media platforms.",
+  },
+  {
+    icon: <RxCrop />,
+    title: "Branding",
+    description: "Branding your business with the best strategies and tools.",
   },
 ];
 

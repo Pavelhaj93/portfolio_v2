@@ -1,7 +1,7 @@
 // components
-import ServiceSlider from "../../components/ServiceSlider";
-import Bulb from "../../components/Bulb";
-import Circles from "../../components/Circles";
+import ServiceSlider from "../../components/services/ServiceSlider";
+import Bulb from "../../components/images/Bulb";
+import Circles from "../../components/images/Circles";
 
 // framer-motion
 import { motion } from "framer-motion";
@@ -31,7 +31,9 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              nereknu cus
+              Empowering Online Presence: Elevate Your Brand with Expert
+              Front-End Development, SEO Strategies, Compelling Marketing, and
+              Engaging Copywriting Services under My Services.
             </motion.p>
           </div>
           {/* slider */}

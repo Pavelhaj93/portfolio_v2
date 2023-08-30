@@ -8,9 +8,9 @@ const sora = Sora({
 });
 
 //components/
-import Nav from "../components/Nav";
-import Header from "../components/Header";
-import TopLeftImg from "../components/TopLeftImg";
+import Nav from "./Nav";
+import Header from "./Header";
+import TopLeftImg from "../images/TopLeftImg";
 
 const Layout = ({ children }) => {
   return (

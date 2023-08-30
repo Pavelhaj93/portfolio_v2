@@ -2,10 +2,8 @@
 import Image from "next/image";
 
 // components
-import ParticlesContainer from "../components/ParticlesContainer";
-import ProjectsBtn from "../components/ProjectsBtn";
-import Avatar from "../components/Avatar";
-
+import ParticlesContainer from "../components/effects/ParticlesContainer";
+import ProjectsBtn from "../components/main/ProjectsBtn";
 // framer-motion
 import { motion } from "framer-motion";
 
@@ -35,9 +33,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            text bla bklasfapsgasjga kjsapf jawspf ojaspf jawsofp asgpna
-            wspfnasofn aopwsfj apsfjo apsfj oapsfj apsfj aosfj apsfj aospfj opsa
-            j
+            Let&apos;s build something great together.
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
@@ -60,7 +56,7 @@ const Home = () => {
         {/* particles */}
         <ParticlesContainer />
         {/* avatar image */}
-        <motion.div
+        {/* <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
           animate="show"
@@ -69,7 +65,7 @@ const Home = () => {
           className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:-right-[1%]"
         >
           <Avatar />
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
