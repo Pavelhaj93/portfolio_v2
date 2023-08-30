@@ -19,26 +19,30 @@ const workSlider = {
     {
       images: [
         {
-          path: "/thumb1.jpg",
+          path: "/work/hledammotory.png",
           title: "title",
+          url: "https://www.hledammotory.cz",
           subtitle: "subtitle",
           icon: <BsArrowRight />,
         },
         {
-          path: "/thumb2.jpg",
+          path: "/work/knoflix.png",
           title: "title",
+          url: "https://www.knoflix.cz",
           subtitle: "subtitle",
           icon: <BsArrowRight />,
         },
         {
-          path: "/thumb3.jpg",
+          path: "/work/vaszubarpicture.png",
           title: "title",
+          url: "https://www.vaszubarvhk.cz",
           subtitle: "subtitle",
           icon: <BsArrowRight />,
         },
         {
-          path: "/thumb4.jpg",
+          path: "/work/jpsteelpicture.png",
           title: "title",
+          url: "https://www.jpsteel.cz",
           subtitle: "subtitle",
           icon: <BsArrowRight />,
         },
@@ -47,26 +51,16 @@ const workSlider = {
     {
       images: [
         {
-          path: "/thumb1.jpg",
+          path: "/work/iheadphones.png",
           title: "title",
+          url: "/",
           subtitle: "subtitle",
           icon: <BsArrowRight />,
         },
         {
-          path: "/thumb2.jpg",
+          path: "/work/lfypicture.png",
           title: "title",
-          subtitle: "subtitle",
-          icon: <BsArrowRight />,
-        },
-        {
-          path: "/thumb3.jpg",
-          title: "title",
-          subtitle: "subtitle",
-          icon: <BsArrowRight />,
-        },
-        {
-          path: "/thumb4.jpg",
-          title: "title",
+          url: "/",
           subtitle: "subtitle",
           icon: <BsArrowRight />,
         },
@@ -91,7 +85,8 @@ const WorkSlider = () => {
             <div className="grid grid-cols-2 grid-rows-1 gap-4 cursor-pointer">
               {slide.images.map((image, index) => {
                 return (
-                  <div
+                  <a
+                    href={image.url}
                     key={index}
                     className="relative rounded-lg overflow-hidden flex items-center justify-center group"
                   >
@@ -116,7 +111,7 @@ const WorkSlider = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 );
               })}
             </div>
