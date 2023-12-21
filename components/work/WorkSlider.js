@@ -48,24 +48,6 @@ const workSlider = {
         },
       ],
     },
-    {
-      images: [
-        {
-          path: "/work/iheadphones.png",
-          title: "title",
-          url: "/",
-          subtitle: "subtitle",
-          icon: <BsArrowRight />,
-        },
-        {
-          path: "/work/lfypicture.png",
-          title: "title",
-          url: "/",
-          subtitle: "subtitle",
-          icon: <BsArrowRight />,
-        },
-      ],
-    },
   ],
 };
 
