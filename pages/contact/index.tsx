@@ -5,7 +5,6 @@ import * as z from "zod";
 import { BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import Input from "../../components/input/Input";
-import { ToastContainer, toast } from "react-toastify";
 
 const schema = z.object({
   name: z.string().refine((data) => data.trim() !== "", {

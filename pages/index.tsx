@@ -1,6 +1,3 @@
-// next image
-import Image from "next/image";
-
 // components
 import ParticlesContainer from "../components/effects/ParticlesContainer";
 import ProjectsBtn from "../components/main/ProjectsBtn";
