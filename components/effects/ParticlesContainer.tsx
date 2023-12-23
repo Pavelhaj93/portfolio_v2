@@ -28,7 +28,7 @@ const ParticlesContainer = () => {
         fpsLimit: 120,
         interactivity: {
           events: {
-            onCLick: {
+            onClick: {
               enable: false,
               mode: "push",
             },
@@ -63,7 +63,7 @@ const ParticlesContainer = () => {
             enable: true,
           },
           move: {
-            directions: "none",
+            direction: "none",
             enable: true,
             outModes: {
               default: "bounce",

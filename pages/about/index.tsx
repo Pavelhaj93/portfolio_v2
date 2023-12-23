@@ -1,3 +1,4 @@
+import React from "react";
 import {
   FaHtml5,
   FaCss3,
@@ -98,6 +99,10 @@ const aboutData = [
     title: "certificates",
     info: [
       {
+        title: "Azure Fundamentals - AZ 900 - Microsoft",
+        stage: "2023",
+      },
+      {
         title: "Introduction to Web Accessibility - W3Cx",
         stage: "2023",
       },
@@ -153,7 +158,7 @@ import Avatar from "../../components/images/Avatar";
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full  bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
       {/* avatar img */}
       <motion.div
